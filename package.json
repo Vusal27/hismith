@@ -1,0 +1,33 @@
+{
+  "name": "hismith",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vusal27/hismith.git"
+  },
+  "author": "Vusal Gakhramanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vusal27/hismith/issues"
+  },
+  "homepage": "https://github.com/Vusal27/hismith#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "gulp": "^4.0.0"
+  }
+}

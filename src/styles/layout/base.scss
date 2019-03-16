@@ -1,0 +1,129 @@
+html, body {
+    width: 100vw;
+    font-family: 'tt_norms', Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+p {
+    margin: 0px;
+}
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    font-weight: normal;
+}
+button {
+    outline: none;
+}
+:root {
+    font-size: 15px;
+    @include laptop {
+        font-size: 14px;
+    }
+    @include tablet {
+        font-size: 13px; 
+    }
+    @include phone {
+        font-size: 12px;
+    }
+}
+input, textarea {
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1140px;
+    margin: auto;
+    padding: 15px 20px 20px;
+    @include laptop() {
+        padding: 15px 11.5% 10px;
+    }
+    @include tablet() {
+        padding: 15px 30px;
+    }
+    @include phone() {
+        padding: 15px 10px 30px;
+    }
+    &_section {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: 100%;
+        box-sizing: border-box;
+        padding-bottom: 80px;
+        position: relative;
+        @include tablet() {
+            padding: 0 6.5% 45px 11.5%
+        }
+        @include phone() {
+            padding: 0 10px 45px 20px;
+        }
+    }
+}
+.btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 10px;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    @include laptop() {
+        font-size: 6px;
+    }
+    &:before {
+        content: "";
+        display: block;
+        height: 45px;
+        width: 2px;
+        background: $orange;
+        position: absolute;
+        bottom: 200%;
+        right: 0;
+        cursor: auto;
+        @include laptop() {
+            height: 23px;;
+        }
+    }
+    &-wrap {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+.arrow {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    width: 45px;
+    height: 35px;
+    align-self: center;
+    &_mr40 {
+        margin-right: -40px;
+        @include phone() {
+            margin: 0;
+        }
+    }
+    &_mb {
+        @include phone() {
+            transform: translateY(60px);
+            height: 50px;
+        }
+    }
+    &_dnone {
+        @include phone() {
+            display: none;
+        }
+    }
+    &-icon {
+        transform: translate(-50%, -40%);
+    }
+}

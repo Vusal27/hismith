@@ -1,0 +1,18 @@
+$orange: #ff351b;
+$grey: #636363;
+
+@mixin laptop {
+    @media (max-width:1200px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width:768px) {
+        @content;
+    }
+}
+@mixin phone {
+    @media (max-width:480px) {
+        @content;
+    }
+}

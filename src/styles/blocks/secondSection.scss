@@ -1,0 +1,55 @@
+.secondSection {
+    padding: 90px 80px;
+    display: flex;
+    @include laptop() {
+        padding: 48px 11.5%;
+    }
+    @include tablet() {
+        padding: 48px 4%;
+    }
+    @include phone() {
+        flex-flow: column;
+        padding: 48px 10px;
+    }
+    &__text {
+        width: 34%;
+        font-size:34px;
+        @include laptop() {
+            font-size: 24px;
+        }
+        @include phone() {
+            width: 90%;
+        }
+    }
+    &__selects {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 66%;
+        font-size: 28px;
+        color: $orange;
+        @include phone() {
+            width: 95%;
+        }
+        &-item {
+            width: 44%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ababab;
+            @include laptop() {
+                width: 38%;
+                font-size: 16px;
+            }
+            @include phone() {
+                width: 48%;
+            }
+        }
+        &-icon {
+            width: 15px;
+            height: 10px;
+            cursor: pointer;
+        }
+    }
+}

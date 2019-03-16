@@ -1,0 +1,113 @@
+.fourthSection {
+    padding: 60px 60px 0;
+    position: relative;
+    @include laptop() {
+        height: 434px;
+    }
+    &__title {
+        margin-bottom: 50px;
+        font-size: 34px;
+    }
+    &__slider {
+        margin-left: 90px;
+        overflow: hidden;
+        width: calc(100vw - 150px);
+        height: 567px;
+        position: relative;
+        @include laptop() {
+            margin-left: 2.5vw;
+            height: 345px;
+            width: calc(100vw - 225px);
+        }
+        @include tablet() {
+            width: calc(100vw - 150px);
+        }
+    }
+    &__btn {
+        position: absolute;
+        top: 50%;
+        background: transparent;
+        border: none;
+        padding: 0;
+        height: 40px;
+        width: 35px;
+        overflow: hidden;
+        z-index: 1;
+        cursor: pointer;
+        &_left {
+            left: 50px;
+        }
+        &_right {
+            right: 90px;
+        }
+        &-icon {
+            transform: translate(-43%,-35%);
+        }
+    }
+    &__empty {
+        position: absolute;
+        right: 0;
+        width: 175px;
+        height: 100%;
+        background: rgba(250, 250, 250, .4);
+        top: 0;
+        @include laptop() {
+            display: none;
+        }
+    }
+}
+.slider {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    &__item {
+        position: relative;
+        margin: 0 25px;
+        box-sizing: border-box;
+        width: 315px;
+        @include laptop() {
+            width: 22vw;
+            margin: 0 2.5vw;
+        }
+        @include phone() {
+            width: 60vw;
+        }
+    }
+    &__info {
+        position: absolute;
+        top: 35px;
+        width: 150px;
+        left: 240px;
+        z-index: 1;
+        @include laptop() {
+            left: 145px;
+            width: 90px;
+        }
+        @include phone() {
+            left: 200px;
+        }
+        &-title {
+            font-size: 17px;
+            @include laptop() {
+                font-size: 10px;
+            }
+        }
+        &-desc {
+            font-size: 10px;
+            @include laptop() {
+                font-size: 6px;
+            }
+        }
+    }
+    &__img {
+        transform: translateY(5px);
+        @include laptop() {
+            height: 340px;
+        }
+        @include phone() {
+            height: 100vw;
+        }
+    }
+}
